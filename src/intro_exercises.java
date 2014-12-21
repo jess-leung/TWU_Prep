@@ -2,6 +2,8 @@
  * Created by jessieleung on 21/12/14.
  */
 
+import java.util.*;
+
 public class intro_exercises {
 
     /*
@@ -142,6 +144,26 @@ public class intro_exercises {
         }
     }
 
+    /*
+     * Get factors of a number.
+     * Return empty list if prime.
+     */
+    public static ArrayList<Integer> getPrimeNumbers(int n){
+        ArrayList<Integer> factors = new ArrayList<Integer>();
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                factors.add(i);
+            }
+        }
+        // Check if prime
+        if(factors.size()==2){
+            return new ArrayList<Integer>();
+        }
+        else{
+            return factors;
+        }
+    }
+
     public static void main(String args[]){
         easiestExerciseEver();
         drawHorizontalLine(5);
@@ -151,5 +173,7 @@ public class intro_exercises {
         drawDiamond(3);
         drawDiamondWithName(3,"Jess");
         fizzbuzz();
+        ArrayList<Integer> factors = getPrimeNumbers(30);
+        System.out.print(factors);
     }
 }
