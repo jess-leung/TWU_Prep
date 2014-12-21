@@ -62,11 +62,43 @@ public class intro_exercises {
         }
     }
 
+    /*
+     * Draw diamond
+     */
+    public static void drawDiamond(int n){
+        int numberRows = n+(n-1);
+        drawCentredTriangle(n);
+
+    }
+
+    /**
+     * fizzbuzz method
+     */
+    public static void fizzbuzz(){
+        for(int i=1;i<=100;i++){
+            if(i%3==0 || i%5==0){
+                if(i%3==0 && i%5==0) {
+                    System.out.println("Fizzbuzz");
+                }
+                else if(i%3==0){
+                    System.out.println("Fizz");
+                }
+                else{
+                    System.out.println("Buzz");
+                }
+            }
+            else{
+                System.out.println(i);
+            }
+        }
+    }
+
     public static void main(String args[]){
         easiestExerciseEver();
         drawHorizontalLine(5);
         drawVerticalLine(3);
         drawRightTriangle(4);
         drawCentredTriangle(5);
+        fizzbuzz();
     }
 }
